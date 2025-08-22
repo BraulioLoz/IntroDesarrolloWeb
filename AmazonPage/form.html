@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>BuscAmazón</title>
+  </head>
+  <body>
+    <h1>Busca tus productos en amazon</h1>
+
+    <h2>Formulario GET www.amazon.com.mx</h2>
+
+    <form method = "get" action="https://www.amazon.com.mx/s" target="_blank">
+      <label for="searchInput">¡¡Busca en Amazon México!!:</label>
+      <input
+        type="text"
+        id="searchInput"
+        name="k"
+        placeholder="Término de búsqueda"
+        required
+      />
+      <button type="submit" id="nav-search-submit-text">BuscAmazon :D</button>
+    </form>
+
+    <h2>POST para iniciar sesión en amazon.mx</h2>
+
+    <form
+      method="post"
+      id="loginForm"
+      target="_blank"
+      autocomplete="off"
+      novalidate
+      action="https://www.amazon.com.mx/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com.mx%2F%3Fref_%3Dnav_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=mxflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+      onkeypress="if (event && event.keyCode == 13) Login.submitLoginRequest();"
+    >
+      <fieldset>
+        <legend>Inicio de sesión</legend>
+
+        <!-- Campo de correo electrónico -->
+        <label for="userNameInput">Correo electrónico:</label>
+        <input
+          type="email"
+          id="ap_email_login"
+          name="email"
+          placeholder="comprador@amazon.com"
+          spellcheck="false"
+          autocomplete="off"
+          required
+        />
+
+        <!-- Botón de envío -->
+        <button
+          type="submit"
+          id="continue"
+        >
+          ¡Mete tu correo!
+        </button>
+      </fieldset>
+
+      <!-- Método de autenticación oculto -->
+      <input
+        type="hidden"
+        name="AuthMethod"
+        value="FormsAuthentication"
+        id="optionForms"
+      />
+    </form>
+
+
+  </body>
+</html>
