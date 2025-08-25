@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Investigación Múltiple</title>
+    </head>
+
+
+    <body>
+        <div>
+        <header>
+            <h1>Investigación Múltiple</h1>
+            <nav>
+                <ul>
+                    <li><a href="#seccion1">Sección 1 - b/strong, i/em, s/del</a></li>
+                    <li><a href="#seccion2">Sección 2 - elementos de linea y de bloque</a></li>
+                    <li><a href="#seccion3">Sección 3 - formularios</a></li>
+                </ul>
+            </nav>
+        </header>
+        </div>
+
+        <hr>
+        
+        <div>
+            <section id="seccion1">
+            <h2>Sección 1 - b/strong, i/em, s/del</h2>
+            <div>
+                <p>Esta seccion tendrá información sobre: 
+                    <ol>
+                        <li>Diferencias entre las etiquetas</li>
+                        <li>Implicaciones visuales</li>
+                        <li>Implicaciones respecto a los motores de búsqueda como Google</li>
+                    </ol>
+                </p>
+            </div>
+
+            
+            <div>
+                <h3>&lt;b&gt; vs. &lt;strong&gt;</h3>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Información</th>
+                            <th>&lt;b&gt;</th>
+                            <th>&lt;strong&gt;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Diferencias entre las etiquetas</td>
+                            <td>Resalta texto poniéndolo en "negritas" sin añadir importancia semántica.</td>
+                            <td>Pone el texto en "negritas" añadiendo importancia semántica al motor de búsqueda.</td>
+                        </tr>
+                        <tr>
+                            <td>Implicaciones visuales</td>
+                            <td>El texto se muestra en negritas, pero sin un significado adicional.</td>
+                            <td>El texto se muestra en negritas y se considera importante para el contenido.</td>
+                        </tr>
+                        <tr>
+                            <td>Implicaciones al motor de búsqueda</td>
+                            <td>No le indica al motor (como google) que es información relevante, solo es un cambio visual</td>
+                            <td>Le indica al motor de búsqueda que el texto es relevante al tema.</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">En una página del itam de las carreras, 
+                                se debería poner en &lt;strong&gt; los nombres de las carreras y en &lt;b&gt; 
+                                los nombres de los profesores para resaltar realmente las carreras y darle un énfasis 
+                                VISUAL a los profesores.
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <br>
+                
+                <b>Texto con &lt;b&gt;</b> y este es un ejemplo de <strong>Texto con &lt;strong&gt;</strong>
+
+            </div>
+
+            <div>
+                <h3>&lt;em&gt; vs. &lt;i&gt;</h3>
+                <!-- div>table.border1((thead>tr>th*3)+(tbody>(tr>td*3)*3)+tfoot) -->
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Información</th>
+                            <th>&lt;em&gt;</th>
+                            <th>&lt;i&gt;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Diferencias entre las etiquetas</td>
+                            <td>Sirve para resaltar texto que es importante o requiere una mayor atención.</td>
+                            <td>Se utiliza para que se diferencie estéticamente del resto, por ejemplo, títulos.</td>
+                        </tr>
+                        <tr>
+                            <td>Implicaciones visuales</td>
+                            <td>El texto se muestra en cursivas y se considera importante para el contenido.</td>
+                            <td>El texto se muestra en cursivas, pero sin un significado adicional.</td>
+                        </tr>
+                        <tr>
+                            <td>Implicaciones al motor de búsqueda</td>
+                            <td>Le indica al motor de búsqueda que el texto es relevante al tema.</td>
+                            <td>No le indica al motor (como google) que es información relevante, solo es un cambio visual</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">
+                                En una página de noticias se debería poner en &lt;em&gt; las palabras que son 
+                                importantes para el tema (como definiciones o conceptos clave) y en &lt;i&gt; 
+                                los nombres de las secciones para diferenciarlas visualmente.
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <br>
+
+                <em>Texto con &lt;em&gt;</em> y este es un ejemplo de <i>Texto con &lt;i&gt;</i>
+            
+            </div>
+
+            <div>
+                <h3>&lt;s&gt; vs. &lt;del&gt;</h3>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Informacion</th>
+                            <th>&lt;s&gt;</th>
+                            <th>&lt;del&gt;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Diferencias entre las etiquetas</td>
+                            <td>Se usa para texto que ya no es relevante actualmente.</td>
+                            <td>Se utiliza para texto que se quiere mostrar como eliminado.</td>
+                        </tr>
+                        <tr>
+                            <td>Implicaciones visuales</td>
+                            <td>El texto se muestra tachado, indicando que ya no es relevante.</td>
+                            <td>El texto se muestra con una línea a través de él, indicando que ha sido eliminado.</td>
+                        </tr>
+                        <tr>
+                            <td>Implicaciones al motor de búsqueda</td>
+                            <td>No le indica al motor de búsqueda nada en especial, solo es un cambio visual.</td>
+                            <td>Le indica al motor de búsqueda que el texto ha sido eliminado explícitamente del documento.</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        En una página como Amazon, se puede poner un &lt;s&gt; en el precio 
+                        para poder mostrar un precio con descuento, mientras que &lt;del&gt; se usaría para un cambio articulo
+                        que ya no se vende actualmente en el sitio.
+                    </tfoot>
+                </table>
+
+                <br>
+
+                Precio original <s>$100</s>, ahora <strong>$80</strong>
+                
+                <br>
+                
+                <del>Laptop ASUS TUF F15</del> ya <i>no</i> está en <i>venta</i>.
+
+            </div>
+
+        </section>
+
+        </div>
+
+        <hr>
+
+        <section id="seccion2"></section>
+            
+            <h2>Sección 2 — Elementos de línea y de bloque</h2>
+
+            <p><strong>Definiciones:</strong></p>
+            <ul>
+                <li><strong>Elemento de bloque:</strong> inicia en línea nueva y 
+                    ocupa todo el ancho disponible (aunque no lo llenen) para crear una 
+                    estructura de bloques en la página.</li>
+                <li><strong>Elemento de línea:</strong> no inicia nueva línea sino que, 
+                    ocupa el ancho necesario y fluye dentro del párrafo (bloque).</li>
+            </ul>
+
+            <article>
+                <h3>Ejemplos de elementos de bloque</h3>
+                <ol>
+                    <li>&lt;p&gt; — Párrafo</li>
+                    <li>&lt;div&gt; — Contenedor genérico</li>
+                    <li>&lt;section&gt; — Sección</li>
+                    <li>&lt;article&gt; — Contenido independiente</li>
+                    <li>&lt;header&gt; — Encabezado de página/sección</li>
+                    <li>&lt;footer&gt; — Pie de página/sección</li>
+                </ol>
+            </article>
+
+            <article>
+                <h3>Ejemplos de elementos de línea</h3>
+                <ol>
+                    <li>&lt;span&gt; — Fragmento en línea</li>
+                    <li>&lt;a&gt; — Enlace</li>
+                    <li>&lt;img&gt; — Imagen “reemplazada” (se comporta en línea por defecto)</li>
+                    <li>&lt;strong&gt; — Importancia</li>
+                    <li>&lt;em&gt; — Énfasis</li>
+                    <li>&lt;label&gt; — Etiqueta de formulario</li>
+                </ol>
+            </article>
+
+            <p>
+                Como bien se ha visto en la clase, podemos usar un elemento como &lt;div&gt; o &lt;p&gt; para poder
+                agrupar varios elementos dentro de éstos, como información sobre nuestros juegos favoritos,
+                donde dentro de cada uno de los párrafos podemos agregar elementos
+                como <a href="https://braulioloz.github.io/" target="_blank">enlaces</a>, poner palabras en <strong>negritas</strong> o <em>cursivas</em>, etc.
+            </p>
+
+        </section>
+        
+        <section id="seccion3">
+            <h2>Sección 3 — Formulario</h2>
+
+            <form oninput="sum.value = Number(n1.value||0) + Number(n2.value||0); rngOut.value = rng.value">
+
+                <fieldset>
+                    <legend>Campos &lt;input&gt; (7 tipos distintos)</legend>
+
+                    <p>
+                        <label for="name">Nombre (text):</label>
+                        <input id="name" name="name" type="text" placeholder="Tu nombre" required minlength="2" maxlength="60" />
+                    </p>
+
+                    <p>
+                        <label for="email">Correo (email):</label>
+                        <input id="email" name="email" type="email" placeholder="tucorreo@dominio.com" required />
+                    </p>
+
+                    <p>
+                        <label for="age">Edad (number):</label>
+                        <input id="age" name="age" type="number" min="0" max="120" step="1" />
+                    </p>
+
+                    <p>
+                        <label for="bday">Fecha (date):</label>
+                        <input id="bday" name="bday" type="date" />
+                    </p>
+
+                    <p>
+                        <label for="favcolor">Color favorito (color):</label>
+                        <input id="favcolor" name="favcolor" type="color" value="#0C3921" />
+                    </p>
+
+                    <p>
+                        <label for="rng">Satisfacción (range 1–10):</label>
+                        <input id="rng" name="rng" type="range" min="1" max="10" step="1" />
+                        <output id="rngOut" for="rng">5</output>
+                    </p>
+
+                    <p>
+                        <label for="archivo">Adjuntar archivo (file):</label>
+                        <input id="archivo" name="archivo" type="file" accept=".pdf,image/*" />
+                    </p>
+
+                    <details>
+                        <summary>Atributos de &lt;input&gt;</summary>
+                        <ul>
+                            <li>Comunes: type, name, id, value, placeholder, required</li>
+                            <li>Validación/valor: min, max, step, pattern, maxlength, minlength</li>
+                            <li>Subtipos: text, email, number, date, color, range, file, etc.</li>
+                        </ul>
+                    </details>
+
+                </fieldset>
+
+
+
+                <fieldset>
+                    <legend>&lt;label&gt;</legend>
+                    <p>Un &lt;label&gt; se asocia explícitamente al control mediante el atributo <em>for</em> (que coincide con el <em>id</em> del control).</p>
+                    <p>
+                        <label for="texto">Etiqueta de ejemplo (for="texto"):</label>
+                        <input id="texto" type="text" placeholder="Escribe algo…" />
+                    </p>
+                    <details>
+                        <summary>Atributos útiles de &lt;label&gt;</summary>
+                        <ul>
+                            <li><em>for</em> (asociación explícita)</li>
+                        </ul>
+                    </details>
+                </fieldset>
+
+
+
+                <fieldset>
+                    <legend>&lt;output&gt;</legend>
+                    <p>Ejemplo aritmético (actualiza al escribir):</p>
+                    <p>
+                        <label for="n1">n1:</label>
+                        <input id="n1" name="n1" type="number" value="2" />
+                        <label for="n2">n2:</label>
+                        <input id="n2" name="n2" type="number" value="3" />
+                        <span>Resultado:</span>
+                        <output id="sum" name="sum" for="n1 n2">5</output>
+                    </p>
+                    <details>
+                        <summary>Atributos útiles de &lt;output&gt;</summary>
+                        <ul>
+                            <li>for (lista de IDs de controles relacionados)</li>
+                            <li>name (nombre para envío de formulario)</li>
+                        </ul>
+                    </details>
+                </fieldset>
+
+
+
+                <fieldset>
+                    <legend>&lt;progress&gt;</legend>
+                    <p>
+                        <label for="prog">Progreso de carga:</label>
+                        <progress id="prog" max="100" value="65">65%</progress>
+                    </p>
+                    <details>
+                        <summary>Atributos útiles de &lt;progress&gt;</summary>
+                        <ul>
+                            <li>max (valor total)</li>
+                            <li>value (avance actual)</li>
+                        </ul>
+                    </details>
+                </fieldset>
+
+                <fieldset>
+                    <legend>&lt;select&gt; + &lt;option&gt;</legend>
+                    <p>
+                        <label for="country">País:</label>
+                        <select id="country" name="country" required>
+                            <option value="" selected disabled>— Selecciona —</option>
+                            <option value="mx">México</option>
+                            <option value="us">Estados Unidos</option>
+                            <option value="es" disabled>España (no disponible)</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="skills">Habilidades (múltiple):</label>
+                        <select id="skills" name="skills" multiple size="3">
+                            <option value="py">Python</option>
+                            <option value="js">JavaScript</option>
+                            <option value="sql">SQL</option>
+                        </select>
+                    </p>
+                    <details>
+                        <summary>Atributos útiles</summary>
+                        <ul>
+                            <li><strong>&lt;select&gt;</strong>: name, id, required, multiple, size</li>
+                            <li><strong>&lt;option&gt;</strong>: value, selected, disabled, label</li>
+                        </ul>
+                    </details>
+                </fieldset>
+
+                <fieldset>
+                    <legend>&lt;textarea&gt;</legend>
+                    <p>
+                        <label for="comments">Comentarios:</label>
+                        <br>
+                        <textarea id="comments" name="comments" rows="4" cols="40"
+                                    placeholder="Escribe tus comentarios…"
+                                    minlength="10" maxlength="280" required></textarea>
+                    </p>
+                    <details>
+                        <summary>Atributos útiles de &lt;textarea&gt;</summary>
+                        <ul>
+                            <li>rows, cols</li>
+                            <li>placeholder, minlength, maxlength, required</li>
+                            <li>name, id</li>
+                        </ul>
+                    </details>
+                </fieldset>
+
+            </form>
+        </section>
+
+
+    </body>
+
+
+</html>
