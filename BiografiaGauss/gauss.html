@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografía de Carl Friedrich Gauss</title>
+    
+    <style>
+        body {
+            background-color: #EBEBEB;
+            color: #275E91;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #275E91;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            border-bottom: 3px solid #AFD0BF;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #275E91;
+            border-left: 5px solid #AFD0BF;
+            padding-left: 15px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        h3 {
+            color: #275E91;
+            text-decoration: underline;
+            text-decoration-color: #AFD0BF;
+        }
+
+        p {
+            text-align: justify;
+            color: #275E91;
+        }
+
+        #header {
+            background-color: #AFD0BF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        .photo {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .photo img {
+            border: 3px solid #275E91;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        .destacado {
+            background-color: #AFD0BF;
+            padding: 2px 6px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .termino-tecnico {
+            color: #275E91;
+            font-style: italic;
+            border-bottom: 2px dotted #AFD0BF;
+        }
+
+        .metodo {
+            background-color: #275E91;
+            color: #EBEBEB;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .metodo-destacado {
+            background-color: #275E91;
+            color: #EBEBEB;
+            padding: 2px 5px;
+            border-radius: 3px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .dato-curioso {
+            color: #275E91;
+            font-style: italic;
+            border: 1px dotted #AFD0BF;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: rgba(175, 208, 191, 0.3);
+        }
+
+        .descripcion {
+            color: #275E91;
+        }
+
+        .concepto {
+            text-decoration: underline;
+            text-decoration-color: #275E91;
+        }
+
+        .fenomeno {
+            background-color: #AFD0BF;
+            padding: 1px 4px;
+            border-radius: 3px;
+        }
+
+        .logros-destacados {
+            background-color: #AFD0BF;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #275E91;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin: 20px 0;
+        }
+
+        .palacio {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .palacio img {
+            border: 3px solid #275E91;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        .imagenes-adicionales {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .imagenes-adicionales img {
+            margin: 10px;
+            border: 2px solid #275E91;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+
+        .obras {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #AFD0BF;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .cronologia {
+            background-color: white;
+            padding: 45px;
+            border-radius: 8px;
+            border-left: 4px solid #275E91;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nota-privacidad {
+            display: block;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: rgba(175, 208, 191, 0.4);
+            border: 1px dotted #275E91;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #275E91;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 2px solid #275E91;
+            border-radius: 20px;
+            background-color: #EBEBEB;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #275E91;
+            color: #EBEBEB;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #AFD0BF;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        form div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #275E91;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #AFD0BF;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus {
+            border-color: #275E91;
+            outline: none;
+            box-shadow: 0 0 5px rgba(39, 94, 145, 0.3);
+        }
+
+        button {
+            background-color: #275E91;
+            color: #EBEBEB;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+
+        button:hover {
+            background-color: #AFD0BF;
+            color: #275E91;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+        }
+
+        /* 
+        PROFE, NO SE DESAPARECE A LOS 4OO PORQUE NO PUEDO HACER TAN PEQUEÑA LA PANTALLA
+        POR ESO LE ESTOY PONIENDO 501px PARA QUE EN EL VIDEO SI SE MUESTRE
+        */
+        @media (max-width: 501px) {
+            .oculta-400{
+                display: none !important;
+            }
+        }
+
+        
+
+        @media (max-width: 700px) {
+            .logros-destacados {
+                background-color: #275E91;
+                color: #EBEBEB;
+            }
+            
+            .logros-destacados h2 {
+                color: #EBEBEB;
+                border-left-color: #AFD0BF;
+            }
+            
+            .logros-destacados p {
+                color: #EBEBEB;
+            }
+            
+            .logros-destacados .destacado {
+                background-color: #AFD0BF;
+                color: #275E91;
+            }
+            
+            .logros-destacados .termino-tecnico {
+                color: #AFD0BF;
+                border-bottom-color: #EBEBEB;
+            }
+            
+            .logros-destacados .metodo {
+                background-color: #AFD0BF;
+                color: #275E91;
+            }
+            
+            .logros-destacados .dato-curioso {
+                color: #EBEBEB;
+                border-color: #AFD0BF;
+                background-color: rgba(175, 208, 191, 0.2);
+            }
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, #AFD0BF, #275E91, #AFD0BF);
+            margin: 30px 0;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        figcaption {
+            font-style: italic;
+            color: #275E91;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <header id="header">
+        <h1>Carl Friedrich Gauss (1777-1855)</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#vida">Vida</a></li>
+                <li><a href="#obra">Obra</a></li>
+                <li><a href="#cronologia">Cronología</a></li>
+                <li><a href="https://www.shutterstock.com/es/search/carl-friedrich-gauss" target="_blank">Banco de imágenes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Princeps mathematicorum</h2>
+            <p>
+                Matemático, astrónomo, geodesta y físico alemán. Sus contribuciones cimentan la teoría de números, la estadística moderna, la geometría diferencial, la astronomía y el electromagnetismo
+            </p>
+            <ul>
+                <li>Nace el 30 de abril en 1777, Brunswick (Alemania)</li>
+                <li>Fallece el 23 de febrero de 1855, Gottingen (Alemania)</li>
+                <li>Fue profesor de astronomía y director del observatorio desde 1807 en Collegium Carolinum; Universidad de Gottingen</li>
+                <li>Apodo: <strong>Princeps mathematicorum</strong></li>
+                <li>Cita atribuida: "La matemática es la reina de las ciencias, y la teoría de números la reina de la matemática".</li>
+            </ul>
+            <div class="photo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Carl_Friedrich_Gauss_1840_by_Jensen.jpg" alt="Retrato de Carl Friedrich Gauss" width="300">
+                <figcaption>Retrato de Carl Friedrich Gauss (1777-1855)</figcaption>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section id="vida">
+            <h2>Biografía en síntesis</h2>
+            <p>
+                Fue un niño prodigio cuya precocidad aritmética es célebre; estudió en el Collegium Carolinum (Brunswick) y 
+                posteriormente en la Universidad de Göttingen. En 1796 demostró la constructibilidad del heptadecágono con 
+                regla y compás; en 1799 presentó una de las primeras demostraciones del <strong>Teorema Fundamental del 
+                Álgebra</strong>; y en 1801 publicó <em><strong>Disquisitiones Arithmeticae</strong></em>, 
+                obra fundacional de la teoría de números moderna. Fue profesor de astronomía y director del observatorio en 
+                <strong>Göttingen (1807–1855)</strong>; desarrolló el método de <strong>mínimos cuadrados</strong>, trabajó en 
+                <strong>distribución de errores</strong> y en la <strong>geodesia</strong> del Reino de Hannover, e impulsó junto 
+                con <strong>Wilhelm Weber</strong> investigaciones en <strong>magnetismo terrestre</strong> y telegrafía. 
+                En sus últimos años profundizó en geometría y análisis hasta su fallecimiento en Göttingen el 23 de febrero de 1855.
+            </p>
+
+            <div class="palacio">
+                <img class="oculta-400"
+                src="https://upload.wikimedia.org/wikipedia/commons/6/60/20171029_SchlossFassade_RL_breit_DSC00157_PtrQs.jpg"
+                alt="Palacio de Göttingen" width="750">
+            </div>
+
+        </section>
+
+        <hr>
+
+        <article class="logros-destacados">
+            <h2>Logros matemáticos revolucionarios</h2>
+            <p>
+                <span class="destacado">Gauss revolucionó múltiples campos de las matemáticas</span> durante su carrera. 
+                Su trabajo en <span class="termino-tecnico">teoría de números</span> estableció las bases para la 
+                matemática moderna, mientras que sus contribuciones a la 
+                <span class="termino-tecnico">geometría no euclidiana</span> anticiparon desarrollos que no serían 
+                ampliamente aceptados hasta décadas después.
+            </p>
+            
+            <p>
+                Entre sus logros más notables se encuentra el desarrollo del <span class="metodo">método de mínimos cuadrados</span>, 
+                una técnica estadística fundamental que sigue siendo utilizada en la actualidad para ajustar modelos a datos experimentales. 
+                <span class="dato-curioso">Curiosamente, Gauss desarrolló este método mientras calculaba la órbita del asteroide Ceres</span>, 
+                demostrando su capacidad para aplicar matemáticas avanzadas a problemas prácticos de astronomía.
+            </p>
+
+            <div class="imagenes-adicionales">
+                <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=640x10000:format=png/path/sab24d320592e0f50/image/i19681e1cc09aaf0e/version/1593270281/image.png" 
+                     alt="Método de eliminación gaussiana" width="200">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Normal_Distribution_PDF.svg" 
+                     alt="Distribución normal o gaussiana" width="200">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Carl_Friedrich_Gau%C3%9F_signature.svg" 
+                     alt="Firma de Carl Friedrich Gauss" width="200">
+            </div>
+        </article>
+
+        <hr>
+
+        <section id="obra">
+            <h2>Obras y publicaciones destacadas</h2>
+
+            <div class="obras">
+                <h3>Disquisitiones Arithmeticae (1801):</h3> <span class="descripcion">Congruencias, reciprocidad cuadrática, teoría de formas, estructura modular; introduce notación y método sistemático en teoría de números.</span>
+
+                <h3>Órbita de Ceres (1801):</h3> <span class="descripcion">Recalcula su órbita y predice su reaparición usando técnicas que cristalizaron en el método de <span class="metodo-destacado">mínimos cuadrados</span></span>
+
+                <h3>Theoria Motus... (1809):</h3> <span class="descripcion">Tratado de mecánica celeste que formaliza <span class="metodo-destacado">mínimos cuadrados</span> y el uso de la <span class="concepto">distribución normal</span> para errores.</span>
+
+                <h3>Geometría diferencial (1827):</h3> <span class="descripcion"><b><i>Disquisitiones generales circa superficies curvas, Theorema Egregium y curvatura gaussiana</i></b>.</span>
+
+                <h3>Hipergeométricas (1827):</h3> <span class="descripcion">Estudia la <strong>función hipergeométrica de Gauss</strong>.</span>
+
+                <h3>Magnetismo (1830s):</h3> <span class="descripcion">Unidades absolutas y mediciones sistemáticas del <span class="fenomeno">campo magnético terrestre</span>.</span>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="cronologia">
+            <h2>Cronología de la vida de Gauss</h2>
+            <ol>
+                <div class="cronologia">
+                    <li>1777 — Nace en Brunswick.</li>
+                    <li>1796 — Prueba de la constructibilidad del heptadecágono.</li>
+                    <li>1799 — Tesis sobre el Teorema Fundamental del Álgebra.</li>
+                    <li>1801 — Disquisitiones Arithmeticae; cálculo de la órbita de Ceres.</li>
+                    <li>1807 — Llega a Gottingen como profesor/director del observatorio.</li>
+                    <li>1809 — Theoria Motus…; formaliza mínimos cuadrados y errores normales.</li>
+                    <li>1812 — Trabajos en funciones hipergeométricas.</li>
+                    <li>1821 — Heliotropo para geodesia.</li>
+                    <li>1827 — Theorema Egregium y curvatura gaussiana.</li>
+                    <li>1833 — Telégrafo electromagnético con Weber; campañas de magnetismo.</li>
+                    <li>1855 — Fallece en Gottingen.</li>
+                </div>
+            </ol>
+        </section>
+
+        <hr>
+
+        <section id="contacto">
+            <h2>Recibe más información sobre Gauss</h2>
+            <p>Si deseas recibir contenido adicional sobre la vida y obra de Carl Friedrich Gauss, completa el siguiente formulario:</p>
+            
+            <form id="info-form">
+                <div>
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                
+                <div>
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                
+                <button type="submit">Enviar</button>
+            </form>
+            
+            <span class="nota-privacidad">
+                <strong>Nota:</strong> Tu información será utilizada únicamente para enviar contenido educativo sobre matemáticas y ciencias.
+            </span>
+        </section>
+
+    </main>
+    
+</body>
+
+<footer>
+    <p style="text-align: center; font-size: 1; color: #275E91; margin-top: 20px;">
+        &copy; 2024 Biografía de Carl Friedrich Gauss. Todos los derechos reservados.
+    </p>
+</footer>
+</html>
