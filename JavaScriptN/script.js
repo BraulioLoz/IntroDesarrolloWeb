@@ -13,3 +13,10 @@ function cuadradoClasico(x) {
 
 /* arrow para elevar al cuadrado */
 const cuadradoArrow = x => x * x;
+
+
+console.log(multiplicarClasico(3, "4")); // 12
+console.log(multiplicarArrow("3", 4)); // 12
+console.log(multiplicarArrow("3", "4")); // 12
+console.log(cuadradoClasico(5)); // 25
+console.log(cuadradoArrow("5")); // 25
