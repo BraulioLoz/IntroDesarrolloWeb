@@ -615,14 +615,13 @@ console.log(profesor); // { nombre: "Silvia Guardatti", materia: "AyP" }
 
 ### Convenciones de Nomenclatura
 
-
 ```javascript
-// ✅ Buenos nombres de clase (PascalCase)
+// Buenos nombres de clase (PascalCase)
 class UsuarioManager { }
 class CalculadoraAvanzada { }
 class ProductoServicio { }
 
-// ❌ Evitar nombres confusos
+// Evitar nombres confusos
 class userManager { } // debe ser PascalCase
 class calculadora_avanzada { } // usar camelCase en propiedades
 class Producto_Servicio { } // inconsistente
@@ -631,7 +630,7 @@ class Producto_Servicio { } // inconsistente
 ### Cuándo usar Clases vs Funciones
 
 ```javascript
-// ✅ Usar clases cuando tengas:
+// Usar clases cuando tengas:
 // - Múltiples instancias con estado compartido
 // - Comportamiento complejo que requiere encapsulación
 // - Herencia y polimorfismo
@@ -654,85 +653,23 @@ class GestorInventario {
   }
 }
 
-// ✅ Usar funciones para operaciones simples
+// Usar funciones para operaciones simples
 function calcularPrecioTotal(precio, cantidad, descuento = 0) {
   return (precio * cantidad) * (1 - descuento / 100);
 }
 ```
 
-### Patrones Comunes
+### Qué evitar
 
 ```javascript
-// ✅ Singleton Pattern
-class Configuracion {
-  static instancia;
-  
-  constructor() {
-    if (Configuracion.instancia) {
-      return Configuracion.instancia;
-    }
-  
-    this.apiUrl = 'https://api.ejemplo.com';
-    this.timeout = 5000;
-    Configuracion.instancia = this;
-  }
-  
-  static obtenerInstancia() {
-    if (!Configuracion.instancia) {
-      Configuracion.instancia = new Configuracion();
-    }
-    return Configuracion.instancia;
-  }
-}
-
-// ✅ Factory Pattern
-class VehiculoFactory {
-  static crearVehiculo(tipo, ...args) {
-    switch (tipo.toLowerCase()) {
-      case 'auto':
-        return new Automovil(...args);
-      case 'moto':
-        return new Motocicleta(...args);
-      case 'camion':
-        return new Camion(...args);
-      default:
-        throw new Error(`Tipo de vehículo no soportado: ${tipo}`);
-    }
-  }
-}
-
-// ✅ Observer Pattern
-class EventEmitter {
-  constructor() {
-    this.eventos = new Map();
-  }
-  
-  on(evento, callback) {
-    if (!this.eventos.has(evento)) {
-      this.eventos.set(evento, []);
-    }
-    this.eventos.get(evento).push(callback);
-  }
-  
-  emit(evento, datos) {
-    if (this.eventos.has(evento)) {
-      this.eventos.get(evento).forEach(callback => callback(datos));
-    }
-  }
-}
-```
-
-### Anti-patrones a Evitar
-
-```javascript
-// ❌ No hagas esto - Clases muy grandes con muchas responsabilidades
+// NO hagas esto - Clases muy grandes con muchas responsabilidades
 class SuperClase {
   // 50+ métodos y propiedades
   // Múltiples responsabilidades
   // Difícil de mantener y testear
 }
 
-// ✅ Mejor - Dividir en clases más pequeñas y específicas, es decir, ABSTRAE lo más que puedas. 
+// Mejor - Dividir en clases más pequeñas y específicas, es decir, ABSTRAE lo más que puedas. 
 // La abstracción es la mejor práctica  al momento de hacer un desarrollo de Sowftware. 
 // Un libro que puede ayudar a entender por qué extraer es mejor a largo plazo es el siguiente (pero es en python)
 // https://www.cosmicpython.com/#buy_the_book
@@ -748,13 +685,13 @@ class NotificacionService {
   // Solo notificaciones
 }
 
-// ❌ No hagas esto - Herencia excesiva
+// NO hagas esto - Herencia excesiva
 class A extends B { }
 class C extends A { }
 class D extends C { }
 class E extends D { } // Demasiados niveles
 
-// ✅ Mejor - Composición sobre herencia
+// Mejor - Composición sobre herencia
 class Vehiculo {
   constructor(motor, ruedas) {
     this.motor = motor;
@@ -762,7 +699,7 @@ class Vehiculo {
   }
 }
 
-// ❌ No hagas esto - Campos públicos sin control
+// NO hagas esto - Campos públicos sin control
 class Producto {
   constructor(nombre, precio) {
     this.nombre = nombre;
@@ -770,7 +707,7 @@ class Producto {
   }
 }
 
-// ✅ Mejor - Encapsulación con campos privados
+// Mejor - Encapsulación con campos privados
 class Producto {
   #precio;
   
@@ -796,12 +733,12 @@ class Persona {
     this.edad = edad;
   }
   
-  // ✅ Métodos descriptivos y específicos
+  // Métodos descriptivos y específicos
   esMayorDeEdad() {
     return this.edad >= 18;
   }
   
-  // ✅ Métodos que retornan valores útiles
+  // Métodos que retornan valores útiles
   obtenerInformacion() {
     return {
       nombre: this.nombre,
@@ -810,7 +747,7 @@ class Persona {
     };
   }
   
-  // ✅ Validación en setters
+  // Validación en setters
   set edad(nuevaEdad) {
     if (nuevaEdad < 0 || nuevaEdad > 150) {
       throw new Error('Edad inválida');
@@ -818,12 +755,12 @@ class Persona {
     this.edad = nuevaEdad;
   }
   
-  // ✅ Métodos estáticos para utilidades
+  // Métodos estáticos para utilidades
   static compararEdades(persona1, persona2) {
     return persona1.edad - persona2.edad;
   }
   
-  // ✅ Métodos que permiten method chaining
+  // Métodos que permiten method chaining
   cambiarNombre(nuevoNombre) {
     this.nombre = nuevoNombre;
     return this; // Permite chaining
