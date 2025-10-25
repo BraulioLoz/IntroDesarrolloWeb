@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Spotify Artistas :D</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+    />
+    <script src="obten-artista.js" defer></script>
+</head>
+<body class="container mt-5 bg-dark"> 
+    <h1 class="h1" style="color: #479f75;">Spotify Artistas :D</h1>
+    <div class="p-2 mt-3">
+        <div class="input-group mb-3">
+            <span class="input-group-text">Token de acceso</span>
+            <input
+                class="form-control"
+                type="text"
+                id="token"
+                placeholder="Bearer token aquí"
+            />
+            <select class="form-select bg-success-subtle" id="artist-id">
+                <option value="2sSGPbdZJkaSE2AbcGOACx">The Marias</option>
+                <option value="72VywtXEoONiBLNu3ibGI7">Silvana Estrada</option>
+                <option value="51yyeVxyvecgePAWXmeLUE">Daniel, Me Estás Matando</option>
+                <option value="5p1ARDx76hnOXoeigLIKit">Little Jesus</option>
+                <option value="1537hUepB5bxPxjWmZUWjy">BluesBiz</option>
+                <option value="2jSGzJw0ebJLu7OLVSOcBP">Plan B</option>
+                <option value="2IMZYfNi21MGqxopj9fWx8">Rels B</option>
+                <option value="6IdtcAwaNVAggwd6sCKgTI">Zoé</option>
+                <option value="1ZdhAl62G6ZlEKqIwUAfZR">Enjambre</option>
+                <option value="188pkeHUWXnROe7lFVYRRa">Paté de Fuá</option>
+                <option value="3mXI2gpwWnNO9qbQG3n3EP">Lila Downs</option>
+            </select>
+            <button class="btn" style="background-color: #479f75; color: white;" id="fetch-btn">Info del Artista</button>
+        </div>
+    </div>
+
+    <section id="artist-info"></section>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"
+    ></script>
+</body>
+</html>
