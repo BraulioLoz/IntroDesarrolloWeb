@@ -36,6 +36,7 @@ async function ejecutaFuncion() {
     container.innerHTML = "";
 
     const parrafo = document.createElement("p");
+    parrafo.style.color = "white";
     parrafo.textContent = "Carganding...";
     container.appendChild(parrafo);
 
